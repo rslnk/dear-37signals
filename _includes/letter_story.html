@@ -1,31 +1,14 @@
 <section id="story" class="relative grid gap-16 px-6 py-24 bg-spacegray-100/50">
   <div class="grid w-full max-w-4xl gap-2 mx-auto">
     <h2 class="text-3xl font-heading text-spacegray-900">
-      Story title
+      {{ site.data.story.title }}
     </h2>
     <p class="text-lg text-spacegray-300/80">
-      Subtitle
+      {{ site.data.story.subtitle }}
     </p>
   </div>
   <div class="grid w-full max-w-4xl gap-8 mx-auto">
-    <h3 class="text-2xl font-semibold tracking-wide font-heading text-spacegray-900">
-      Heading 3
-    </h3>
-    <p class="w-full max-w-4xl mx-auto text-2xl font-light leading-relaxed font-serif text-spacegray-700/70">
-      Entropy is inevitable, quiet, patient. It drifts silently, settling like dust on surfaces once carefully arranged, gently reclaiming order in subtle acts of disorder. To entropy, all things return quietly—pixels misalign, carefully placed notes scatter, designs drift from their grids. Yet, amid the swirling dust of chaos, emerges the quiet desire to create momentary clarity, to carve fleeting beauty from entropy’s perpetual flow.
-    </p>
-    <p class="w-full max-w-4xl mx-auto text-2xl font-light leading-relaxed font-serif text-spacegray-700/70">
-      This humble rebellion manifests in small gestures: neatly stacked papers, symmetry found and then quietly lost, alignments exacted momentarily from the persistent drift of disorder. The entropyfighter does not reject chaos but acknowledges its inevitability, celebrating brief instances of symmetry discovered amid randomness. There is poetry in transient order—a delicate balance shaped gently from chaos and lovingly surrendered back to it.
-    </p>
-    <h3 class="text-2xl font-semibold tracking-wide font-heading text-spacegray-900">
-      Heading 3
-    </h3>
-    <p class="w-full max-w-4xl mx-auto text-2xl font-light leading-relaxed font-serif text-spacegray-700/70">
-      Each careful alignment, each pixel perfected, is a whisper against entropy’s deafening silence, recognizing the ironic beauty that pushing entropy away in one place draws it closer elsewhere. The entropyfighter finds purpose precisely in these temporary gestures, cherishing brief symmetries created amid endless disorder, knowing full well they will dissolve quietly back into chaos.
-    </p>
-    <p class="w-full max-w-4xl mx-auto text-2xl font-light leading-relaxed font-serif text-spacegray-700/70">
-      And thus, the ode is not resistance but recognition: to entropy all returns, dust gently reclaiming what once briefly sparkled. Quietly, peacefully, the entropyfighter accepts this cycle, finding beauty precisely in the quiet inevitability of entropy—knowing that to chaos it all must return, softly, silently, inevitably.
-    </p>
+		{{ site.data.story.body | markdownify }}
   </div>
   <div class="w-full max-w-4xl mx-auto">
     <div class="w-10 h-[3px] bg-spacegray-300"></div>
