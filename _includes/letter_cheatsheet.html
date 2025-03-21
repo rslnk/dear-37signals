@@ -1,26 +1,23 @@
 <section id="cheatsheet" class="relative grid gap-16 px-6 py-24">
   <div class="grid w-full max-w-4xl gap-2 mx-auto">
     <h2 class="text-3xl font-heading text-spacegray-900">
-     {{ site.data.cheatsheet.title }}
+      {{ site.data.cheatsheet.title }}
     </h2>
     <p class="text-lg text-spacegray-300/80">
       {{ site.data.cheatsheet.subtitle }}
     </p>
   </div>
-  <dl class="w-full max-w-4xl mx-auto space-y-12">
-    <div class="grid grid-cols-2 gap-x-16 mb-6">
-      <dt class="py-4 text-2xl border-b border-gray-300 font-heading">
-        Signal
-      </dt>
-      <dd class="py-4 text-2xl border-b border-gray-300 font-heading">
-        Response
-      </dd>
-    </div>
+  <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 w-full max-w-4xl mx-auto space-y-12">
+    <dt class="hidden sm:block py-4 text-2xl border-b border-gray-300 font-heading">
+      Signal
+    </dt>
+    <dd class="hidden sm:block py-4 text-2xl border-b border-gray-300 font-heading">
+      Response
+    </dd>
     {% for entry in site.data.cheatsheet.entries %}
-    <div class="grid grid-cols-2 gap-x-16">
       <dt class="flex gap-4">
         <img class="w-6 h-6" src="icons/quote-icon.png" alt="quotation mark icon">
-        <p class="font-sans font-semibold leading-relaxed text-spacegray-900">
+        <p class="font-sans font-medium leading-relaxed text-spacegray-900">
           {{ entry.signal }}
         </p>
       </dt>
@@ -29,7 +26,6 @@
           {{ entry.response }}
         </p>
       </dd>
-    </div>
     {% endfor %}
   </dl>
   <div class="w-full max-w-4xl mx-auto mt-8">
