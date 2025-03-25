@@ -17,14 +17,14 @@
     {% for entry in site.data.cheatsheet.entries %}
       <dt class="flex gap-4">
         <img class="w-6 h-6" src="assets/icons/quote-icon.png" alt="quotation mark icon">
-        <p class="font-sans font-medium leading-relaxed text-lg text-spacegray-900">
-          {{ entry.signal }}
-        </p>
+        <div class="space-y-4 font-sans font-medium leading-relaxed text-lg text-spacegray-900">
+          {{ entry.signal | markdownify }}
+        </div>
       </dt>
       <dd>
-        <p class="font-serif font-light leading-relaxed text-xl text-spacegray">
-          {{ entry.response }}
-        </p>
+        <div class="space-y-4 font-serif font-light leading-relaxed text-xl text-spacegray">
+          {{ entry.response | markdownify }}
+        </div>
       </dd>
     {% endfor %}
   </dl>
